@@ -87,7 +87,7 @@ html {
 }
 
 body {
-  margin: 0 0 var(--header-height) 0;
+  margin: 0 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
@@ -279,7 +279,7 @@ img {
 }
 
 .home_contact-container {
-  margin-right: 2rem;
+  margin-right: 1.75rem;
 }
 
 .home_social-icon {
@@ -434,7 +434,6 @@ img {
   row-gap: 1.5rem;
   padding-left: 2.7rem;
   height: max-content;
-  margin-bottom: var(--mb-2-5);
 }
 
 .skills_data {
@@ -466,7 +465,35 @@ img {
 
 
 /*==================== PORTFOLIO ====================*/
+.portfolio_container {
+  overflow: initial;
+}
 
+/* 
+.portfolio_content {
+  padding: 0 .5rem;
+} */
+
+.portfolio_img {
+  width: 265px;
+  border-radius: .5rem;
+  justify-self: center;
+}
+
+.portfolio_title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-0-5);
+}
+
+.portfolio_description {
+  margin-bottom: var(--mb-0-75);
+}
+
+/* For now will just have two portfolio pieces with no swiper, but implementing swiper would be nice in the future.  */
+
+.portfolio_button:hover .button_icon {
+  transform: translateX(.25rem);
+}
 
 /*==================== PROJECT IN MIND ====================*/
 
@@ -476,9 +503,77 @@ img {
 
 /*==================== CONTACT ME ====================*/
 
+.contact_container {
+  row-gap: 3rem;
+}
+
+.contact_information {
+  display: flex;
+  margin-bottom: var(--mb-2);
+}
+
+.contact_icon {
+  font-size: 2rem;
+  color: var(--first-color);
+  margin-right: var(--mb-1);
+}
+
+.contact_title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+}
+
+.contact_subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
 
 /*==================== FOOTER ====================*/
 
+.footer {
+  padding-top: 2rem;
+}
+
+.footer_container {
+  row-gap: 2.5rem;
+}
+
+.footer_bg {
+  background-color: var(--first-color-second);
+  padding: 2rem 0 2.2rem;
+}
+
+.footer_title {
+  font-size: var(--h1-font-size);
+  margin-bottom: var(--mb-0-25);
+}
+
+.footer_subtitle {
+  font-size: var(--small-font-size);
+}
+
+.footer_social {
+  font-size: 1.5rem;
+  margin-right: var(--mb-1-5);
+}
+
+.footer_social:hover {
+  color: var(--first-color-lighter);
+}
+
+.footer_copy {
+  font-size: var(--smaller-font-size);
+  text-align: center;
+  margin-top: var(--mb-3);
+}
+
+.footer_title,
+.footer_subtitle,
+.footer_link,
+.footer_social,
+.footer_copy {
+  color: #FFF;
+}
 
 /*========== SCROLL UP ==========*/
 
@@ -491,9 +586,56 @@ img {
 
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
+@media screen and (max-width: 350px) {
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+
+  .nav_menu {
+    padding: 2rem .25rem 4rem;
+  }
+
+  .nav_list {
+    column-gap: 0;
+  }
+
+  .home_content {
+    grid-template-columns: .25fr 3fr;
+  }
+
+  .home_blob {
+    width: 250px;
+  }
+
+  .skills_icon {
+    font-size: 1.5rem;
+  }
+
+  .skills_title {
+    font-size: var(--normal-font-size);
+  }
+
+  .skills_list {
+    padding-left: 1rem;
+  }
+}
 
 
 /* For medium devices */
+@media screen and (min-width: 568px) {
+  .home_content {
+    grid-template-columns: max-content 1fr 1fr;
+  }
 
+  .home_data {
+    grid-column: initial;
+  }
+
+  .home_img {
+    order: 1;
+    justify-self: center;
+  }
+}
 
 /* For large devices */
