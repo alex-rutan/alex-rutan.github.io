@@ -593,8 +593,8 @@ img {
     margin-right: 1.5rem;
   }
 
-  .portfolio_content {
-    grid-template-columns: repeat(2, 1fr);
+  .portfolio_img {
+    width: 400px;
   }
 
   .contact {
@@ -680,8 +680,14 @@ img {
     column-gap: 3rem;
   }
 
+  .portfolio_img {
+    width: 500px;
+  }
+
   .portfolio_content {
     margin-top: var(--mb-2-5);
+    grid-template-columns: 1fr .65fr;
+    /* column-gap: 7rem; */
   }
 
   .footer_container {
@@ -713,5 +719,9 @@ img {
 
   .portfolio_content {
     margin-top: 3.5rem;
+  }
+
+  .portfolio_img {
+    width: 600px;
   }
 }
